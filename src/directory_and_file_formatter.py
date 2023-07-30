@@ -67,10 +67,12 @@ def rename_files_and_directories_in_directory(directory):
             # logger.info() the old and new names for each renamed directory
             logger.info(f"Directory '{item}' renamed to '{new_name}'")
 
+            # now, call the function recursively to handle subdirectories
+            rename_files_and_directories_in_directory(new_item_path)
+
 
 if __name__ == "__main__":
     while True:
         directory_input = input("Enter the directory or the directory with the files you want to format:")
         rename_files_and_directories_in_directory(directory_input)
         logger.info("File and directory renaming completed!")
-
