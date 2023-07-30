@@ -1,6 +1,7 @@
 import os
 import shutil
 
+
 def organize_files(path):
     files = os.listdir(path)
 
@@ -16,6 +17,7 @@ def organize_files(path):
         else:
             os.makedirs(os.path.join(path, extension))
             shutil.move(os.path.join(path, file), os.path.join(path, extension, file))
+
 
 if __name__ == "__main__":
     path = input("Enter the directory you want to organize:\n")
