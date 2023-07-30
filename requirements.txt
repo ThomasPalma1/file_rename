@@ -1,1 +1,2 @@
 Unidecode==1.3.6
+loguru==0.7.0
